@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Usuários Cadastrados</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="/css/lista.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-6 col-sm-12 mb-4" th:each="usuario : ${usuarios}">
+				<div class="card">
+					<div class="card-header">
+						<i class="fas fa-user user-icon"></i>
+						<div class="edit-icons">
+
+							<a th:href="@{editar/{id} (id=${usuario.id})}" title="Editar">
+								<i class="fas fa-edit"></i>
+							</a>
+
+							<a data-bs-toggle="modal" th:data-bs-target="'#deleteModal' + ${usuario.id}"
+								title="Excluir">
+								<i class="fas fa-trash-alt"></i>
+							</a>
+						</div>
+					</div>
+					<div class="card-body">
+						<h5 class="card-title user-name" th:text="${usuario.nome}"></h5>
+						<p class="card-text user-info"><i class="fas fa-id-card"></i> CPF: <span
+								th:text="${usuario.cpf}"></span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<button class="btn btn-primary btn-lista" onclick="window.location.href='/cadastrar'">Cadastrar Novo
+			Usuário</button>
+	</div>
+	<!-- Delete Modal -->
+	<div th:each="usuario : ${usuarios}" th:id="'deleteModal' + ${usuario.id}" class="modal fade" tabindex="-1"
+		role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header bg-danger text-white">
+					<h5 class="modal-title" id="deleteModalLabel">Confirmação de Exclusão</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<p>Tem certeza de que deseja excluir este usuário?</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+					<a th:href="@{/excluir/{id}(id=${usuario.id})}" class="btn btn-danger">Confirmar Exclusão</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

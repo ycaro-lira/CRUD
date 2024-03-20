@@ -1,0 +1,73 @@
+
+        body, html {
+			background-color: rgb(255, 128, 64);
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card {
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            background-color: rgb(255, 255, 255); 
+        }
+       
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-control:focus {
+            border-color: rgb(0, 0, 0);
+            box-shadow: none;
+            transition: border-color 0.6s ease-in-out;
+        }
+        .error-message {
+            color: #dc3545;
+            margin-top: 5px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto;
+            margin-top: 20px;
+            padding: 10px;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .btn:hover {
+            background-color: rgb(255, 128, 64);
+        }
+       .btn-cadastro {
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto;
+            margin-top: 20px;
+            padding: 10px;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(255, 128, 0);
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn-cadastro:hover {
+            background-color: rgb(255, 128, 64);
+        }
+    

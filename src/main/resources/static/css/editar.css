@@ -1,0 +1,74 @@
+
+        body {
+            background-color: rgb(255, 128, 64);
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-header {
+            background-color: rgb(255, 255, 255);
+            color: rgb(255, 128, 64);
+            border-radius: 15px 15px 0 0;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .user-icon {
+            font-size: 48px;
+            color: rgb(43, 43, 43);
+        }
+
+        .user-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: rgb(43, 43, 43);
+            text-align: center;
+        }
+
+        .user-info {
+            margin-top: 10px;
+            font-size: 16px;
+            color: rgb(43, 43, 43);
+            text-align: center;
+        }
+
+        .btn-editar {
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto;
+            margin-top: 20px;
+            padding: 10px;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(255, 128, 64);
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn-editar:hover {
+            background-color: rgb(255, 128, 0);
+        }
+    
